@@ -44,6 +44,8 @@
             label3 = new Label();
             button8 = new Button();
             button9 = new Button();
+            saveFileDialog1 = new SaveFileDialog();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
@@ -55,8 +57,10 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1071, 544);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // button1
             // 
@@ -64,8 +68,9 @@
             button1.Name = "button1";
             button1.Size = new Size(152, 48);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Reload";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -73,8 +78,9 @@
             button2.Name = "button2";
             button2.Size = new Size(152, 49);
             button2.TabIndex = 2;
-            button2.Text = "button2";
+            button2.Text = "Filter1";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -82,8 +88,9 @@
             button3.Name = "button3";
             button3.Size = new Size(152, 49);
             button3.TabIndex = 3;
-            button3.Text = "button3";
+            button3.Text = "Filter2";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -91,8 +98,9 @@
             button4.Name = "button4";
             button4.Size = new Size(152, 49);
             button4.TabIndex = 4;
-            button4.Text = "button4";
+            button4.Text = "Filter3";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -100,8 +108,9 @@
             button5.Name = "button5";
             button5.Size = new Size(152, 49);
             button5.TabIndex = 5;
-            button5.Text = "button5";
+            button5.Text = "Filter4";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -109,8 +118,9 @@
             button6.Name = "button6";
             button6.Size = new Size(152, 49);
             button6.TabIndex = 6;
-            button6.Text = "button6";
+            button6.Text = "Filter5";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -118,8 +128,9 @@
             button7.Name = "button7";
             button7.Size = new Size(152, 49);
             button7.TabIndex = 7;
-            button7.Text = "button7";
+            button7.Text = "Filter6";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // label1
             // 
@@ -138,6 +149,7 @@
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(1000, 45);
             trackBar1.TabIndex = 9;
+            trackBar1.ValueChanged += trackBar1_ValueChanged;
             // 
             // trackBar2
             // 
@@ -146,6 +158,7 @@
             trackBar2.Name = "trackBar2";
             trackBar2.Size = new Size(1000, 45);
             trackBar2.TabIndex = 11;
+            trackBar2.ValueChanged += trackBar2_ValueChanged;
             // 
             // label2
             // 
@@ -166,6 +179,7 @@
             trackBar3.Size = new Size(1000, 45);
             trackBar3.TabIndex = 13;
             trackBar3.Scroll += trackBar3_Scroll;
+            trackBar3.ValueChanged += trackBar3_ValueChanged;
             // 
             // label3
             // 
@@ -196,6 +210,11 @@
             button9.TabIndex = 15;
             button9.Text = "Open Image";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -247,5 +266,7 @@
         private Label label3;
         private Button button8;
         private Button button9;
+        private SaveFileDialog saveFileDialog1;
+        private OpenFileDialog openFileDialog1;
     }
 }
